@@ -2,20 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+   width: 100%;
+   color: #0c0c0c;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 1.5;
+   font-family: var(--red-hat-display);
+}
+
+.form-control {
+   @apply w-full bg-transparent px-3 py-2 text-base border rounded-md focus:outline-none;
+}
+
+.react-tel-input .form-control {
+   width: 100% !important;
+   height: 40px !important;
+}
+
+@layer base {
+   :root {
+      --radius: 0.5rem;
+   }
+}
+
+.people-say-card {
+   background: linear-gradient(90deg, rgba(255, 133, 125, 0.2) 0%, rgba(255, 230, 228, 0.15) 100%)
 }
